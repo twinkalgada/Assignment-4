@@ -1,0 +1,35 @@
+"Fixed set of Product Categories"
+enum Category {
+  Shirts
+  Jeans
+  Jackets
+  Sweaters
+  Accessories
+}
+
+"Product Type"
+type Product {
+  id: Int!
+  name: String!
+  category: Category!
+  price: Float
+  imageUrl: String
+}
+
+"Toned down Prodcut, used as inputs, without server generated values."
+input ProductInputs {
+  name: String!
+  category: Category!
+  price: Float
+  imageUrl: String
+}
+
+##### Top level declarations
+
+type Query {
+  productList: [Product!]!
+}
+
+type Mutation {
+  addProduct(product: ProductInputs!): Product!
+}

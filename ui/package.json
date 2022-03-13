@@ -1,0 +1,39 @@
+{
+  "name": "assignment4-ui",
+  "version": "1.0.0",
+  "description": "CS 648 MERN Stack - Assignment 4 UI",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run compile && nodemon -w uiserver.js -w .env uiserver.js",
+    "lint": "eslint . --ext js,jsx --ignore-pattern public",
+    "compile": "babel src --out-dir public",
+    "watch": "npm run compile -- -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twinkalgada/Assignment4.git"
+  },
+  "author": "Twinkal Kantilal Gada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twinkalgada/Assignment4/issues"
+  },
+  "homepage": "https://github.com/twinkalgada/Assignment4#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "nodemon": "^2.0.7"
+  }
+}
